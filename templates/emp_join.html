@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>emp_join</h1>
+
+        <table border="3px">
+            <tr>
+                <th>ENAME</th>
+                <th>EMPNO</th>
+                <th>JOB</th>
+                <th>MGR</th>
+                <th>HIREDATE</th>
+                <th>SAL</th>
+                <th>COMM</th>
+                <th>DEPTNO</th>
+                <th>DNAME</th>
+                <th>DLOC</th>
+            </tr>
+            {% for to in QLTO %}
+                <tr>
+                    <td>{{to.emp_set.ENAME}}</td>
+                    
+                    <td>{{to.EMPNO}}</td>
+                    <td>{{to.JOB}}</td>
+                    <td>{{to.MGR}}</td>
+                    <td>{{to.HIREDATE}}</td>
+                    <td>{{to.SAL}}</td>
+                    <td>{{to.COMM}}</td>
+                    <td>{{to.DEPTNO.DEPTNO}}</td>
+                    <td>{{to.DEPTNO.DNAME}}</td>
+                    <td>{{to.DEPTNO.LOC}}</td>
+
+                </tr>
+            {% endfor %}
+           
+        </table>
+    </center>
+</body>
+</html>

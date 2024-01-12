@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>self joins</h1>
+        
+
+        <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Self Join Example</title>
+</head>
+<body>
+    <h1>Self Join Example - Employees with Managers</h1>
+    <table border="3px">
+        <tr>
+            <th>Employee Number</th>
+            <th>Name</th>
+            <th>Job</th>
+            <th>Manager</th>
+            <th>Hire Date</th>
+            <th>Salary</th>
+            <th>deptno</th>
+        </tr>
+        {% for employee in EANDM %}
+        <tr>
+            <td>{{ employee.EMPNO }}</td>
+            <td>{{ employee.ENAME }}</td>
+            <td>{{ employee.JOB }}</td>
+            <td> {% if employee.MGR.ENAME %}
+                {{ employee.MGR.ENAME}}
+                {% else %} 
+                N/A
+                {% endif %}</td>
+
+            <td>{{ employee.HIREDATE }}</td>
+            <td>{{ employee.SAL }}</td>
+            <td>{{ employee.DEPTNO }}</td>
+
+
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
+       </center>
+</body>
+</html>
